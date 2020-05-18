@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xhd-Ba-dc6">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Kik-Bt-jQR">
+            <objects>
+                <navigationController id="xhd-Ba-dc6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9az-Ru-ubD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="C0R-g2-3Yb" kind="relationship" relationship="rootViewController" id="B9G-Tv-lRa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SyZ-7S-Hzc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="133"/>
+        </scene>
+        <!--CQR-->
+        <scene sceneID="vBP-Ba-vWo">
+            <objects>
+                <viewController id="C0R-g2-3Yb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zaL-fm-nhi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillProportionally" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="1r0-Mr-t4c">
+                                <rect key="frame" x="16.333333333333343" y="362.66666666666669" width="381.33333333333326" height="170.66666666666669"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8U-EV-EYb" userLabel="Share">
+                                        <rect key="frame" x="0.0" y="0.0" width="170.66666666666666" height="170.66666666666666"/>
+                                        <state key="normal" image="Share"/>
+                                        <connections>
+                                            <segue destination="PU5-Gy-iL7" kind="show" id="KVE-pG-5Sw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8j-ry-v0q" userLabel="Scan">
+                                        <rect key="frame" x="210.66666666666669" y="0.0" width="170.66666666666669" height="170.66666666666666"/>
+                                        <state key="normal" image="Scan"/>
+                                        <connections>
+                                            <segue destination="P9O-fN-xRi" kind="show" id="rF9-ne-bgV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1r0-Mr-t4c" firstAttribute="centerY" secondItem="zaL-fm-nhi" secondAttribute="centerY" id="8Xd-iY-hPO"/>
+                            <constraint firstItem="1r0-Mr-t4c" firstAttribute="centerX" secondItem="zaL-fm-nhi" secondAttribute="centerX" id="ldx-ZW-f1N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="C8M-fi-JFn"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CQR" id="XFw-ws-cRz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jle-rM-Jgn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1760.8695652173915" y="132.58928571428572"/>
+        </scene>
+        <!--Share Contacts-->
+        <scene sceneID="QhP-Xx-89o">
+            <objects>
+                <tableViewController id="PU5-Gy-iL7" userLabel="Share Contacts" customClass="ContactsViewController" customModule="CQR" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IvM-25-hMW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Table Cell" textLabel="Cmr-7z-f8a" detailTextLabel="qQA-9v-bgN" style="IBUITableViewCellStyleSubtitle" id="iLm-9P-PpR">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iLm-9P-PpR" id="dhE-4p-p9j">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="55.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cmr-7z-f8a">
+                                            <rect key="frame" x="20.000000000000004" y="8.9999999999999982" width="33.333333333333336" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qQA-9v-bgN">
+                                            <rect key="frame" x="19.999999999999996" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="V2J-gf-dvp" kind="show" identifier="Contact QR" id="xah-AJ-VK6"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="PU5-Gy-iL7" id="4MP-Kp-AeQ"/>
+                            <outlet property="delegate" destination="PU5-Gy-iL7" id="6KD-G4-46b"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Contacts" id="YXG-Qp-fWM"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lTD-S5-1r9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2730" y="-250"/>
+        </scene>
+        <!--Contact QR-->
+        <scene sceneID="r0g-Zy-8lF">
+            <objects>
+                <viewController id="V2J-gf-dvp" userLabel="Contact QR" customClass="ContactQRViewController" customModule="CQR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vm1-c7-b3i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YPh-bF-TCm" userLabel="QR Image View">
+                                <rect key="frame" x="79" y="320" width="256" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="C9u-6Y-V6Y"/>
+                                    <constraint firstAttribute="width" constant="256" id="Ual-Kz-NtT"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YPh-bF-TCm" firstAttribute="centerX" secondItem="Vm1-c7-b3i" secondAttribute="centerX" id="jC4-LO-TTR"/>
+                            <constraint firstItem="YPh-bF-TCm" firstAttribute="centerY" secondItem="Vm1-c7-b3i" secondAttribute="centerY" id="mju-pT-nzl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hqQ-aw-ja4"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="QR" id="c77-rD-qae"/>
+                    <connections>
+                        <outlet property="_QRImage" destination="YPh-bF-TCm" id="ktE-j5-CVh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3q1-17-Jc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3675" y="-250"/>
+        </scene>
+        <!--Contact Scanner-->
+        <scene sceneID="XgF-4X-pNn">
+            <objects>
+                <viewController id="P9O-fN-xRi" userLabel="Contact Scanner" customClass="ContactQRScannerViewController" customModule="CQR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleAspectFill" id="5nE-f2-hwv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ryK-h5-u8B"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scan" id="1I8-4o-Cbe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WXt-zR-HXm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2729" y="630"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Scan" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="Share" width="170.66667175292969" height="170.66667175292969"/>
+    </resources>
+</document>
